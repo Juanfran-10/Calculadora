@@ -283,7 +283,7 @@ fun BotonCalculadora(
         Text(
             text = buttonSpec.text,
             color = buttonSpec.getTextColor(),
-            fontSize = 22.sp
+            fontSize = 30.sp
         )
     }
 }
