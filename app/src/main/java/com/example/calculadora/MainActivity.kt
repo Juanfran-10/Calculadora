@@ -138,14 +138,26 @@ fun Calculadora() {
 
 @Composable
 fun PanEntrada(valorActual: MutableState<String>) {
-    Text(
-        text = valorActual.value,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(24.dp),
-        textAlign = TextAlign.End,
-        fontSize = 56.sp
-    )
+    if(valorActual.value.length < MAX_DIGITS){
+        Text(
+            text = valorActual.value,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(24.dp),
+            textAlign = TextAlign.End,
+            fontSize = 56.sp
+        )
+    }else{
+        Text(
+            text = valorActual.value.substring(1, 10),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(24.dp),
+            textAlign = TextAlign.End,
+            fontSize = 56.sp
+        )
+    }
+
 }
 
 @Composable
